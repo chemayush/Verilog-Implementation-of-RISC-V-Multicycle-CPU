@@ -12,7 +12,7 @@ reg [31:0] DATA_SEG;
 
 integer i;
 initial begin
-    $readmemh("factorial.hex", RAM);
+    $readmemh("test_assembly.hex", RAM);
     
     // Find last non-zero instruction
     last_instr_addr = 0;
