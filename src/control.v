@@ -18,8 +18,7 @@ module control(input                clk, rst,
 wire        PCUpdate;
 wire[1:0]   ALUop;
 
-FSM             stateFSM(clk, rst, op, funct3, Zero, ALUb31, Cout, PCUpdate, Branch, 
-                         AddrSrc, MemWrite, IRWrite, RegWrite, ALUop, ResultSrc, ALUSrcA, ALUSrcB, JALR_LSB, MemOp, state, nextState);
+FSM             stateFSM(clk, rst, op, funct3, Zero, ALUb31, Cout, PCUpdate, Branch, AddrSrc, MemWrite, IRWrite, RegWrite, ALUop, ResultSrc, ALUSrcA, ALUSrcB, JALR_LSB, MemOp, state, nextState);
 aludecoder      alu_dec(op[5], funct3, funct7b5, ALUop, ALUControl);
 imm_dec         immediate(op, ImmSrc);
 
