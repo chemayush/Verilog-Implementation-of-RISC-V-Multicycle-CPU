@@ -15,6 +15,11 @@ This module is responsible for generating various control signals that chooses r
 
 ![Screenshot 2024-10-22 221218](https://github.com/user-attachments/assets/bc06f10e-c803-4eab-acdd-48013724bb80)
 
+# Finite State Machine
+Below is the flowchart of the FSM implemented inside the control unit along with the corresponding control signals.
+
+![fsm](https://github.com/user-attachments/assets/ac6d5bd0-0679-4324-8351-a397db754b30)
+
 # Memory
 Below is the shared memory for the instructions as well as data storage for variables and constants. You can see a lot of extra wires, muxes and gates because of the implementation of halfword and byte store/load instructions and automatic segmentation of code and data segments in the shown memory space.
 
