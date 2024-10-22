@@ -6,6 +6,7 @@ I implemented a Multicycle RISC-V CPU supporting the entire RV32I instruction se
 ![image](https://github.com/user-attachments/assets/dea81ee0-82be-48ec-af73-aa7df0110017)
 
 # Datapath
+The datapath implementation follows a Multicycle architecture, hence multiple intermediate registers and flipflops are used to store the data to be used in the subsequent clock cycles. It also has various multiplexers to choose between different signals appropriate for that particular state of instruction. A register file is incorporated which has 32 registers (x0 - x31) which can store 32 bits of data. A module for generation of 'immediate' value also exists in the datapth.
 ![Screenshot 2024-10-22 221145](https://github.com/user-attachments/assets/e97253ab-f863-4937-8ffd-0ca4da13b1d1)
 
 # Control Unit
