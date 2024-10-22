@@ -27,7 +27,7 @@ Below is the shared memory for the instructions as well as data storage for vari
 
 # Testbench
 A testbench for the verification of implementation of the instructions is also included. A RISCV Assmebly program, test_assembly.s (included) is converted to machine codes (test_assembly.hex) and loaded into the RAM. These instructions are then run according to the program counter value.
-Below are the screenshots of the simulations carried out in modelsim. Different values can be compared according to the current instruction and state. Testbench also verifies these values, further letting you know if any of the instruction implemented is broken. 
+Below are the screenshots of the simulations carried out in modelsim. Different values can be compared according to the current instruction and state using the waveforms. But the testbench also verifies these values, further letting you know if any of the instruction implemented is broken. 
 
 ![Screenshot 2024-10-22 020818](https://github.com/user-attachments/assets/84296325-492a-4fc0-a63a-cb25a9ac1f95)
 ![Screenshot 2024-10-22 021250](https://github.com/user-attachments/assets/e03f65f7-a24e-4027-aef1-1551eb629507)
