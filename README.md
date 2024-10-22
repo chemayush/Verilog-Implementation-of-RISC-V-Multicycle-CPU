@@ -6,13 +6,18 @@ I implemented a Multicycle RISC-V CPU supporting the entire RV32I instruction se
 ![image](https://github.com/user-attachments/assets/dea81ee0-82be-48ec-af73-aa7df0110017)
 
 # Datapath
-The datapath implementation follows a Multicycle architecture, hence multiple intermediate registers and flipflops are used to store the data to be used in the subsequent clock cycles. It also has various multiplexers to choose between different signals appropriate for that particular state of instruction. A register file is incorporated which has 32 registers (x0 - x31) which can store 32 bits of data. A module for generation of 'immediate' value also exists in the datapth.
+The datapath implementation follows a Multicycle architecture, hence multiple intermediate registers and flipflops are used to store the data to be used in the subsequent clock cycles. It also has various multiplexers to choose between different signals appropriate for that particular state of instruction. A register file is incorporated which has 32 registers (x0 - x31) which can store 32 bits of data. A module for generation of 'immediate' value also exists in the datapth. The ALU is reused for all the instructions, even for the increment of the program counter, further reducing the amount of hardware required.
+
 ![Screenshot 2024-10-22 221145](https://github.com/user-attachments/assets/e97253ab-f863-4937-8ffd-0ca4da13b1d1)
 
 # Control Unit
+This module is responsible for generating various control signals that chooses required components to control the flow of data in the datapath according to the current instruction being processed. The FSM module present in the control path is responsible for the efficient control of the instruction states. This is the part that is mainly responible for making it into multicycle architecture. 
+
 ![Screenshot 2024-10-22 221218](https://github.com/user-attachments/assets/bc06f10e-c803-4eab-acdd-48013724bb80)
 
 # Memory
+Below is the shared memory for the instructions as well as data storage for variables and constants. You can see a lot of extra wires, muxes and gates because of the implementation of halfword and byte store/load instructions and automatic segmentation of code and data segments in the shown memory space.
+
 ![Screenshot 2024-10-22 221413](https://github.com/user-attachments/assets/44bf7f1e-a99a-4bbd-b8aa-5d1ccdfb2eaf)
 
 ![Screenshot 2024-10-22 020818](https://github.com/user-attachments/assets/84296325-492a-4fc0-a63a-cb25a9ac1f95)
