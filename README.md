@@ -2,6 +2,9 @@
 
 I implemented a Multicycle RISC-V CPU supporting the entire RV32I instruction set. The design features a multicycle architecture, using a single RAM for both instruction and data segments with automatic memory management. Key components include a shared ALU, a 32x32-bit Register File, and an optimized FSM Controller for handling all the instructions. The unified memory module supports all access widths (byte, halfword, word). It also includes a testbench which is used to verify the implementation of all the instructions.
 
+# Overview of entire architecture
+![image](https://github.com/user-attachments/assets/dea81ee0-82be-48ec-af73-aa7df0110017)
+
 # Datapath
 ![Screenshot 2024-10-22 221145](https://github.com/user-attachments/assets/e97253ab-f863-4937-8ffd-0ca4da13b1d1)
 
